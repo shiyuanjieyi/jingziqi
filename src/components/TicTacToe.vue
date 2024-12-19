@@ -54,6 +54,7 @@ export default defineComponent({
       winner.value = null;
       isCountingDown.value = false;
       clearInterval(timer.intervalId);
+      startCountdown();
     };
 
     // 在 checkWinner 函数中添加平局判断
@@ -120,7 +121,7 @@ export default defineComponent({
       currentPlayer.value = 1;
       winner.value = null;
       isGameStarted.value = true;
-      isCountingDown.value = false;
+      isCountingDown.value = true;
       clearInterval(timer.intervalId);
     };
 
